@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+mlruns/
+mlartifacts/
+.pytest_cache/
+
+# Raw datasets tracked via DVC
+data/raw/train.csv
+data/raw/later.csv
+
+# Explicitly tracked by git
+!data/raw/holdout_features.csv
+!mlflow.db

@@ -1,0 +1,26 @@
+paths:
+  raw_train: data/raw/train.csv
+  raw_later: data/raw/later.csv
+  holdout: data/raw/holdout_features.csv
+  findings: reports/findings.yaml
+  model_path: models/model.joblib
+  predictions_path: predictions/holdout_predictions.csv
+
+target: delivery_min
+
+numeric_features:
+  - distance_km
+  - tiffins
+  - handovers
+  - wait_at_station_min
+  - rider_age
+  - temp_c
+
+categorical_features:
+  - transport
+  - route_zone
+
+tracking_uri: sqlite:///mlflow.db
+experiment_name: mp284-tiffin-relay
+registered_model_name: mp284-delivery-model
+promotion_threshold: 0.15
